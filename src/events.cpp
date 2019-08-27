@@ -867,6 +867,7 @@ void Events::eventPlayerOnGainSkillTries(Player* player, skills_t skill, uint64_
 
 void Events::eventMonsterOnDropLoot(Monster* monster, Container* corpse)
 {
+	std::cout << "eventMonsterOnDropLoot" << std::endl;
 	// Monster:onDropLoot(corpse)
 	if (info.monsterOnDropLoot == -1) {
 		return;

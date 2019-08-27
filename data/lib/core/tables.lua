@@ -14,12 +14,6 @@ table.find = function (table, value)
 end
 
 table.contains = function (txt, str)
-	print(txt)
-	print(str)
-
-	print(type(txt))
-	print(type(str))
-
 	if(type(str) == "string") then
 		return string.match(str, txt)
 	end
