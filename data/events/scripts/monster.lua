@@ -1,5 +1,4 @@
 function Monster:onDropLoot(corpse)
-	print('onDropLoot - lua');
 	if configManager.getNumber(configKeys.RATE_LOOT) == 0 then
 		return
 	end
