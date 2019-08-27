@@ -13,11 +13,7 @@ table.find = function (table, value)
 	return nil
 end
 
-table.contains = function (txt, str)
-	if(type(str) == "string") then
-		return string.match(str, txt)
-	end
-
+table.contains = function (str, txt)
 	for i, v in pairs(str) do
 		if(txt:find(v) and not txt:find('(%w+)' .. v) and not txt:find(v .. '(%w+)')) then
 			return true
