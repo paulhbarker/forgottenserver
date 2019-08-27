@@ -14,7 +14,13 @@ table.find = function (table, value)
 end
 
 table.contains = function (txt, str)
-	return string.match(txt, str)
+	for i, v in pairs(str) do
+		if(txt:find(v) and not txt:find('(%w+)' .. v) and not txt:find(v .. '(%w+)')) then
+			return true
+		end
+	end
+
+	return false
 end
 table.isStrIn = table.contains
 
