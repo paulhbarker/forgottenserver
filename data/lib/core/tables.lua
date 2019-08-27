@@ -15,7 +15,7 @@ end
 
 table.contains = function (txt, str)
 	if(type(str) == "string") then
-		return string.match(txt, str)
+		return string.match(str, txt)
 	end
 
 	for i, v in pairs(str) do
