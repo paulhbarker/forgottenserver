@@ -1005,3 +1005,24 @@ end
 function Guild.removeMember(self, player)
 	return player:getGuild() == self and player:setGuild(nil)
 end
+
+function createFunctions(class)
+	local exclude = {[2] = {"is"}, [3] = {"get", "set", "add", "can"}, [4] = {"need"}}
+	local temp = {}
+	for name, func in pairs(class) do
+		for strLen, strTable in pairs(exclude) do
+			if not table.contains(strTable, name:sub(1,strLen)) then
+				local str = name:sub(1,1):upper()..name:sub(2)
+				local getFunc = function(self) return func(self) end
+				local setFunc = function(self, ...) return func(self, ...) end
+				local get = "get".. str
+				local set = "set".. str
+				table.insert(temp, {set, setFunc, get, getFunc})
+			end
+		end
+	end
+	for _,func in ipairs(temp) do
+		rawset(class, func[1], func[2])
+		rawset(class, func[3], func[4])
+	end
+end
