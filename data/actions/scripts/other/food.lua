@@ -95,7 +95,7 @@ local foods = {
 	[18305] = {0, 'Gulp!'}, -- fresh mushroom beer
 	[18306] = {0, 'Phew!'}, -- stale mushroom beer
 	[18397] = {33, 'Munch.'}, -- mushroom pie
-	[19737] = {10, 'Urgh.'}, -- insectoid eggs
+	[19373] = {10, 'Urgh.'}, -- insectoid eggs
 	[20100] = {15, 'Smack.'}, -- soft cheese
 	[20101] = {12, 'Smack.'} -- rat cheese
 }
