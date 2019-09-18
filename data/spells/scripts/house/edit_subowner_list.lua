@@ -1,12 +1,15 @@
-function onCastSpell(creature, variant)
-	local house = creature:getTile():getHouse()
-	if not house or not house:canEditAccessList(SUBOWNER_LIST, creature) then
-		creature:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
-		creature:getPosition():sendMagicEffect(CONST_ME_POFF)
+function onCastSpell(player, variant)
+	local house = player:getTile():getHouse()
+	if not house then
 		return false
 	end
 
-	creature:setEditHouse(house, SUBOWNER_LIST)
-	creature:sendHouseWindow(house, SUBOWNER_LIST)
+	if house:canEditAccessList(SUBOWNER_LIST, player) then
+		player:setEditHouse(house, SUBOWNER_LIST)
+		player:sendHouseWindow(house, SUBOWNER_LIST)
+	else
+		player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+	end
 	return true
 end

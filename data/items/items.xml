@@ -26133,7 +26133,7 @@
 		<attribute key="duration" value="300" />
 		<attribute key="corpseType" value="blood" />
 	</item>
-	<item id="19737" name="insectoid eggs" plural="insectoid eggs">
+	<item id="17457" name="insectoid eggs" plural="insectoid eggs">
 		<attribute key="weight" value="20" />
 	</item>
 	<item id="19738" article="a" name="damselfly wing">
@@ -28708,7 +28708,6 @@
 	<item fromid="20701" toid="20715" article="a" name="basalt crystal wall" />
 	<item fromid="20723" toid="20727" article="a" name="basalt crystal wall" />
 	<item fromid="20732" toid="20743" article="a" name="basalt crystal wall" />
-	<item id="20752" article="a" name="pick" />
 	<item fromid="20753" toid="20758" article="a" name="hedge" />
 	<item id="20759" article="a" name="lurking tree" />
 	<item id="20760" article="a" name="small birch" />
