@@ -11,6 +11,7 @@
 *.sln.docstates
 .vscode/
 .idea
+.vs/
 
 # Build results
 
@@ -25,6 +26,8 @@ build/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
+*.exe
+*.dll
 *_i.c
 *_p.c
 *.ilk
@@ -172,5 +175,7 @@ pip-log.txt
 *~
 .*.swp
 .*.swo
+
+config.lua
 
 data/world/*.otbm
