@@ -1,13 +1,14 @@
 local combat = Combat()
 combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_ENERGYDAMAGE)
-combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_ENERGYHIT)
+combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_ENERGYAREA)
 combat:setParameter(COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_ENERGY)
 
-local condition = Condition(CONDITION_ENERGY)
-condition:setParameter(CONDITION_PARAM_DELAYED, 1)
-condition:addDamage(25, 3000, -45)
-combat:setCondition(condition)
-
-function onCastSpell(creature, var)
-	return combat:execute(creature, var)
+function onCastSpell(creature, variant)
+	local min = (creature:getLevel() / 80) + (creature:getMagicLevel() * 0.15) + 1
+	local max = (creature:getLevel() / 80) + (creature:getMagicLevel() * 0.25) + 1
+	local rounds = math.random(math.floor(min), math.floor(max))
+	for _, target in ipairs(combat:getTargets(creature, variant)) do
+		creature:addDamageCondition(target, CONDITION_ENERGY, DAMAGELIST_VARYING_PERIOD, target:isPlayer() and 13 or 25, {10, 12}, rounds)
+	end
+	return true
 end
