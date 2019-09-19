@@ -417,7 +417,7 @@
 	<monster name="Feversleep" file="dreamhaunters/feversleep.xml" />
 	<monster name="Frazzlemaw" file="dreamhaunters/frazzlemaw.xml" />
 	<monster name="Guzzlemaw" file="dreamhaunters/guzzlemaw.xml" />
-	<monster name="Minion Of Gaz'Haragoth" file="dreamhaunters/minion of gaz'haragoth.xml" />
+	<monster name="Minion Of Gaz'Haragoth" file="dreamhaunters/minion_of_gaz'haragoth.xml" />
 	<monster name="Nightmare Of Gaz'Haragoth" file="dreamhaunters/nightmare_of_gaz'haragoth.xml" />
 	<monster name="Retching Horror" file="dreamhaunters/retching_horror.xml" />
 	<monster name="Shiversleep" file="dreamhaunters/shiversleep.xml" />
