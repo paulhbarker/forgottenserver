@@ -715,11 +715,6 @@
 	<monster name="Rorc" file="orcs/rorc.xml" />
 	<monster name="Running Elite Orc Guard" file="orcs/running_elite_orc_guard.xml" />
 
-	<!-- Raid Orcs -->
-	<monster name="Orcarmor" file="orcs/raid/orcarmor.xml" />
-	<monster name="Orchelmet" file="orcs/raid/orchelmet.xml" />
-	<monster name="Orcshield" file="orcs/raid/orcshield.xml" />
-
 	<!-- Outlaws -->
 	<monster name="Adventurer" file="outlaws/adventurer.xml" />
 	<monster name="Angry Adventurer" file="outlaws/angry_adventurer.xml" />
