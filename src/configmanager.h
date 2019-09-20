@@ -42,6 +42,7 @@ class ConfigManager
 			CLASSIC_EQUIPMENT_SLOTS,
 			CLASSIC_ATTACK_SPEED,
 			SCRIPTS_CONSOLE_LOGS,
+			PARTY_EXP_SHARE_ALWAYS,
 
 			LAST_BOOLEAN_CONFIG /* this must be the last one */
 		};
