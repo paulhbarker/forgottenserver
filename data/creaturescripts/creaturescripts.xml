@@ -20,14 +20,14 @@
 	<event type="kill" name="InquisitionUngreez" script="quests/inquisition/inquisitionQuestUngreez.lua" />
 	<event type="kill" name="KillingInTheNameOfKills" script="quests/killing-in-the-name-of/kills.lua" />
 	<event type="kill" name="MastersVoiceServants" script="quests/the-masters-voice/ServantsKill.lua" />
-	<event type="kill" name="ThievesGuildNomad" script="thieves-guild/nomad.lua" />
-	<event type="kill" name="SecretServiceBlackKnight" script="secret-service/black_knight.lua" />
+	<event type="kill" name="ThievesGuildNomad" script="quests/thieves-guild/nomad.lua" />
+	<event type="kill" name="SecretServiceBlackKnight" script="quests/secret-service/black_knight.lua" />
 	<event type="kill" name="WotELizardMagistratus" script="quests/wrath-of-the-emperor/lizardmagistratus.lua" />
 	<event type="kill" name="WotELizardNoble" script="quests/wrath-of-the-emperor/lizardnoble.lua" />
 	<event type="kill" name="WotEKeeper" script="quests/wrath-of-the-emperor/keeper.lua" />
 	<event type="kill" name="WotEBosses" script="quests/wrath-of-the-emperor/bosses.lua" />
 	<event type="kill" name="WotEZalamon" script="quests/wrath-of-the-emperor/zalamon.lua" />
-	<event type="kill" name="PythiusTheRotten" script="firewalker-boots/PythiusTheRotten.lua" />
+	<event type="kill" name="PythiusTheRotten" script="quests/firewalker-boots/PythiusTheRotten.lua" />
 
 	<!-- Others -->
     <event type="advance" name="AdvanceSave" script="others/advance_save.lua" />
