@@ -16,6 +16,7 @@
 			strong health potion,7588,100;
 			strong mana potion,7589,80;
 			ultimate health potion,8473,310;
+			ultimate mana potion,26029,428;
 			vial of urine,2006,10,13;
 			vial of water,2006,8,1;" />
 		<parameter key="shop_sellable" value="
