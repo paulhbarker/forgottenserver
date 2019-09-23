@@ -137,6 +137,7 @@ bool ConfigManager::load()
 	boolean[CLASSIC_ATTACK_SPEED] = getGlobalBoolean(L, "classicAttackSpeed", false);
 	boolean[SCRIPTS_CONSOLE_LOGS] = getGlobalBoolean(L, "showScriptsLogInConsole", true);
 	boolean[PARTY_EXP_SHARE_ALWAYS] = getGlobalBoolean(L, "partyExpShareAlways", false);
+	boolean[ALLOW_DUAL_WIELDING] = getGlobalBoolean(L, "allowDualWielding", false);
 
 	string[DEFAULT_PRIORITY] = getGlobalString(L, "defaultPriority", "high");
 	string[SERVER_NAME] = getGlobalString(L, "serverName", "");
@@ -173,6 +174,8 @@ bool ConfigManager::load()
 	integer[CHECK_EXPIRED_MARKET_OFFERS_EACH_MINUTES] = getGlobalNumber(L, "checkExpiredMarketOffersEachMinutes", 60);
 	integer[MAX_MARKET_OFFERS_AT_A_TIME_PER_PLAYER] = getGlobalNumber(L, "maxMarketOffersAtATimePerPlayer", 100);
 	integer[MAX_PACKETS_PER_SECOND] = getGlobalNumber(L, "maxPacketsPerSecond", 25);
+	integer[DUAL_WIELDING_SPEED_RATE] = getGlobalNumber(L, "dualWieldingSpeedRate", 200);
+	integer[DUAL_WIELDING_DAMAGE_RATE] = getGlobalNumber(L, "dualWieldingDamageRate", 60);
 
 	loaded = true;
 	lua_close(L);
