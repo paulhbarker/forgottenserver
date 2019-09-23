@@ -38,6 +38,16 @@ function Creature:onTargetCombat(target)
 		return true
 	end
 
+	if self:isPlayer() and target:isPlayer() then
+		local party = self:getParty()
+		if party then
+			local targetParty = target:getParty()
+			if targetParty and targetParty == party then
+				return RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER
+			end
+		end
+	end
+
 	if target:isPlayer() then
 		if self:isMonster() then
 			local protectionStorage = target:getStorageValue(Storage.combatProtectionStorage)
