@@ -38,13 +38,13 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say("Me can do unbroken but Big Ben want gold 5000 and Big Ben need a lil' time to make it unbroken. Yes or no??", cid)
 			npcHandler.topic[cid] = 9
 		elseif player:getStorageValue(Storage.SweetyCyclops.AmuletStatus) == 1 then
-			if player:getStorageValue(Storage.SweetyCyclops.AmuletTimer) + 24 * 60 * 60 < os.time() then
+			--if player:getStorageValue(Storage.SweetyCyclops.AmuletTimer) + 24 * 60 * 60 < os.time() then
 				npcHandler:say("Ahh, lil' one wants amulet. Here! Have it! Mighty, mighty amulet lil' one has. Don't know what but mighty, mighty it is!!!", cid)
 				player:addItem(8266, 1)
 				player:setStorageValue(Storage.SweetyCyclops.AmuletStatus, 2)
-			else
-				npcHandler:say("Me need more time!!!", cid)
-			end
+			--else
+			--	npcHandler:say("Me need more time!!!", cid)
+			--end
 			npcHandler.topic[cid] = 0
 		end
 	elseif msgcontains(msg, "yes") then
