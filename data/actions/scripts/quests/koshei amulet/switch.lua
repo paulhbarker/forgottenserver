@@ -16,15 +16,16 @@ local function revertCoffin()
 end
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local statuesInOrder, statueItem = true
-	for i = 1, #config do
-		local statue = config[i]
-		statueItem = Tile(statue.position):getItemById(statue.itemId)
-		if not statueItem then
-			statuesInOrder = false
-			break
-		end
-	end
+	local statuesInOrder = true;
+	local statueItem = true;
+	--for i = 1, #config do
+	--	local statue = config[i]
+	--	statueItem = Tile(statue.position):getItemById(statue.itemId)
+	--	if not statueItem then
+	--		statuesInOrder = false
+	--		break
+	--	end
+	--end
 
 	if not statuesInOrder or Tile(coffinPosition):getItemById(7525) then
 		player:say('Nothing happens', TALKTYPE_MONSTER_SAY, false, player, toPosition)
