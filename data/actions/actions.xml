@@ -388,6 +388,7 @@
 	<action itemid="2566" script="tools/kitchenknife.lua" />
 	<action itemid="2549" script="tools/rake.lua" />
 	<action itemid="2550" script="tools/scythe.lua" />
+	<action itemid="2405" script="tools/scythe.lua" />
 	<action itemid="2580" script="tools/fishing.lua" allowfaruse="1" />
 	<action itemid="5710" script="tools/shovel.lua" />
 	<action itemid="2554" script="tools/shovel.lua" />
@@ -466,15 +467,6 @@
 	<action itemid="17457" script="other/food.lua" />
 	<action fromid="20100" toid="20101" script="other/food.lua" />
 	<action itemid="9999" script="other/blessedsteak.lua" />
-
-	<!-- Spellbooks -->
-	<!--<action itemid="2175" script="other/spellbook.lua" />-->
-	<!--<action fromid="8900" toid="8904" script="other/spellbook.lua" />-->
-	<!--<action itemid="8918" script="other/spellbook.lua" />-->
-	<!--<action itemid="12647" script="other/spellbook.lua" />-->
-	<!--<action itemid="16112" script="other/spellbook.lua" />-->
-	<!--<action itemid="18401" script="other/spellbook.lua" />-->
-	<!--<action fromid="22422" toid="22424" script="other/spellbook.lua" />-->
 
 	<!-- Construction Kits / Beds -->
 	<action fromid="3901" toid="3938" script="other/constructionkits.lua" />

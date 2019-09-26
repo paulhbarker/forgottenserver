@@ -26137,7 +26137,7 @@
 		<attribute key="duration" value="300" />
 		<attribute key="corpseType" value="blood" />
 	</item>
-	<item id="17457" name="insectoid eggs" plural="insectoid eggs">
+	<item id="19737" name="insectoid eggs" plural="insectoid eggs">
 		<attribute key="weight" value="20" />
 	</item>
 	<item id="19738" article="a" name="damselfly wing">

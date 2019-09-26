@@ -3,10 +3,10 @@ combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE)
 combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_EXPLOSIONAREA)
 combat:setParameter(COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_EXPLOSION)
 combat:setParameter(COMBAT_PARAM_BLOCKARMOR, true)
-combat:setArea(createCombatArea(AREA_CROSS1X1))
+combat:setArea(createCombatArea(AREA_CIRCLE3X3))
 
 function onGetFormulaValues(player, level, magicLevel)
-	local min = (level / 5) + (magicLevel * 1.6) + 9
+	local min = (level / 5) + (magicLevel * 2) + 12
 	local max = (level / 5) + (magicLevel * 3.2) + 19
 	return -min, -max
 end

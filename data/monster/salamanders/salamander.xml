@@ -30,7 +30,7 @@
 	</voices>
 	<loot>
 		<item id="2148" countmax="15" chance="72000" />	<!-- gold coin -->
-		<item id="19373" countmax="5" chance="33000" />	<!-- insectoid eggs -->
+		<item id="19737" countmax="5" chance="33000" />	<!-- insectoid eggs -->
 		<item id="2544" countmax="3" chance="7890" />	<!-- arrow -->
 		<item id="2120" chance="4700" />					<!-- rope -->
 		<item id="2398" chance="3780" />					<!-- mace -->

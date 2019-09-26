@@ -23,6 +23,7 @@
 
 	<!-- Spawn -->
 	<globalevent name="RaidSystem" interval="10000" script="spawn/raids.lua" />
+	<globalevent name="WildHorses" interval="10800000" script="spawn/wild_horses.lua" />
 	<globalevent name="BossSystem" interval="3600000" script="spawn/BossSpawn.lua" />
 	<globalevent type="startup" name="RashidSpawn" script="spawn/RashidSpawn.lua" />
 	<globalevent type="startup" name="CilliaSpawn" script="spawn/CilliaSpawn.lua" />

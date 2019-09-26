@@ -214,7 +214,7 @@ local config = {
 		name = 'wild horse',
 		id = 17,
 		type = TYPE_MONSTER,
-		chance = 5,
+		chance = 10,
 		fail = {
 			{run = true, text = 'With its last strength the horse the horse runs to safety.'},
 			{broke = true, sound = 'Weeeheeeehee', text = 'The wild horse happily munches the sugar oat and runs on.'},
