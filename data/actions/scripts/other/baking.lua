@@ -25,6 +25,9 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	elseif isInArray(millstones, target.itemid) then
 		item:transform(item.itemid, item.type - 1)
 		player:addItem(2692, 1)
+	elseif item.itemid == 2694 and target.itemid == 5467 then
+		item:transform(13939)
+		target:remove()
 	else
 		return false
 	end

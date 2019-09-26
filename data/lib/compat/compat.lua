@@ -1249,8 +1249,6 @@ function doTileAddItemEx(pos, uid, flags)
 	return false
 end
 
-function isInArray(array, value) return table.contains(array, value) end
-
 function doCreateItem(itemid, count, pos)
 	local tile = Tile(pos)
 	if not tile then
@@ -1279,7 +1277,7 @@ function createFunctions(class)
 	local temp = {}
 	for name, func in pairs(class) do
 		for strLen, strTable in pairs(exclude) do
-			if not table.contains(strTable, name:sub(1,strLen)) then
+			if not isInArray(strTable, name:sub(1,strLen)) then
 				local str = name:sub(1,1):upper()..name:sub(2)
 				local getFunc = function(self) return func(self) end
 				local setFunc = function(self, ...) return func(self, ...) end

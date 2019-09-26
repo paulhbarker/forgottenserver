@@ -8,7 +8,7 @@ local config = {
 	},
 	time = 3600,
 	brokenJarId = 13495,
-	chance = 5,
+	chance = 33,
 	randomText = {'Waaaaaah', 'You are too afraid to destroy this object'},
 	bossName = 'Horestis',
 	bossPosition = Position(32941, 32793, 12),
@@ -35,10 +35,10 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 
 	player:setStorageValue(cStorage, os.time() + config.time)
 
-	if math.random(100) > config.chance then
-		player:say(config.randomText[math.random(#config.randomText)], TALKTYPE_MONSTER_SAY)
-		return true
-	end
+	--if math.random(100) > config.chance then
+	--	player:say(config.randomText[math.random(#config.randomText)], TALKTYPE_MONSTER_SAY)
+	--	return true
+	--end
 
 	item:transform(config.brokenJarId)
 

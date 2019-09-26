@@ -47,9 +47,9 @@
 		<item name="throwing star" countmax="2" chance="8000" />
 		<item name="poison dagger" chance="1500" />
 		<item name="leather armor" chance="10000" />
+		<item name="bast skirt" chance="10000" />
 		<item name="poison arrow" countmax="3" chance="5000" />
 		<item name="tribal mask" chance="510" />
-		<item name="bast skirt" chance="100" />
 		<item name="seeds" chance="200" />
 	</loot>
 </monster>

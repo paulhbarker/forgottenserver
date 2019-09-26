@@ -36,6 +36,6 @@ function onThink(interval, lastExecution, thinkInterval)
 	end
 
 	local spawn = spawns[math.random(#spawns)]
-	Game.createMonster(spawn.monster, spawn.position, false, true)
+		Game.createMonster(spawn.monster, spawn.position, false, true)
 	return true
 end

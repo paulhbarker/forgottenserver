@@ -20,12 +20,14 @@ function Container.createLootItem(self, item)
 	if itemCount > 0 then
 		local tmpItem = self:addItem(item.itemId, math.min(itemCount, 100))
 		if not tmpItem then
+			print('Item error: container.createLootItem() item id: ' .. item.itemId .. ' on line 21 of container.lua');
 			return false
 		end
 
 		if tmpItem:isContainer() then
 			for i = 1, #item.childLoot do
 				if not tmpItem:createLootItem(item.childLoot[i]) then
+					print('Item error: container.createLootItem() item id: ' .. item.childLoot[i].itemId .. ' on line 21 of container.lua');
 					tmpItem:remove()
 					return false
 				end

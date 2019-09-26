@@ -95,12 +95,13 @@ local foods = {
 	[18305] = {0, 'Gulp!'}, -- fresh mushroom beer
 	[18306] = {0, 'Phew!'}, -- stale mushroom beer
 	[18397] = {33, 'Munch.'}, -- mushroom pie
-	[19373] = {10, 'Urgh.'}, -- insectoid eggs
+	[19737] = {10, 'Urgh.'}, -- insectoid eggs
 	[20100] = {15, 'Smack.'}, -- soft cheese
 	[20101] = {12, 'Smack.'} -- rat cheese
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+	print(item.itemid);
 	local food = foods[item.itemid]
 	if not food then
 		return false
