@@ -30,6 +30,7 @@
 	<event type="kill" name="PythiusTheRotten" script="quests/firewalker-boots/PythiusTheRotten.lua" />
 
 	<!-- Others -->
+	<event type="kill" name="AutoLoot" script="others/autoloot.lua" />
     <event type="advance" name="AdvanceSave" script="others/advance_save.lua" />
     <event type="login" name="PlayerLogin" script="others/login.lua" />
 	<event type="login" name="FirstItems" script="others/firstitems.lua" />

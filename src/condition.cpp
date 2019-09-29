@@ -1173,6 +1173,7 @@ bool ConditionDamage::doDamage(Creature* creature, int32_t healthChange)
 	if (g_game.combatBlockHit(damage, attacker, creature, false, false, field)) {
 		return false;
 	}
+
 	return g_game.combatChangeHealth(attacker, creature, damage);
 }
 

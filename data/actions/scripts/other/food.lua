@@ -101,7 +101,6 @@ local foods = {
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	print(item.itemid);
 	local food = foods[item.itemid]
 	if not food then
 		return false
