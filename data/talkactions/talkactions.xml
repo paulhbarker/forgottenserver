@@ -60,6 +60,8 @@
 	<talkaction words="!online" script="online.lua" />
 	<talkaction words="!serverinfo" script="serverinfo.lua" />
 	<talkaction words="!addon" script="addon.lua" />
+	<talkaction words="!invite" separator=" " script="party_invite.lua" />
+	<talkaction words="!join" separator=" " script="party_join.lua" />
 
 	<!-- test talkactions -->
 	<talkaction words="!z" separator=" " script="magiceffect.lua" />

@@ -417,7 +417,7 @@ bool Actions::useItem(Player* player, const Position& pos, uint8_t index, Item* 
 	player->stopWalk();
 
 	if (isHotkey) {
-		showUseHotkeyMessage(player, item, player->getItemTypeCount(item->getID(), item->getSubType()));
+		showUseHotkeyMessage(player, item, player->getItemTypeCount(item->getID(), -1));
 	}
 
 	ReturnValue ret = internalUseItem(player, pos, index, item, isHotkey);
@@ -446,16 +446,17 @@ bool Actions::useItemEx(Player* player, const Position& fromPos, const Position&
 		return false;
 	}
 
-	if (isHotkey) {
-		showUseHotkeyMessage(player, item, player->getItemTypeCount(item->getID(), item->getSubType()));
-	}
-
 	if (!action->executeUse(player, item, fromPos, action->getTarget(player, creature, toPos, toStackPos), toPos, isHotkey)) {
 		if (!action->hasOwnErrorHandler()) {
 			player->sendCancelMessage(RETURNVALUE_CANNOTUSETHISOBJECT);
 		}
 		return false;
 	}
+
+	if (isHotkey) {
+		showUseHotkeyMessage(player, item, player->getItemTypeCount(item->getID(), -1));
+	}
+
 	return true;
 }
 
