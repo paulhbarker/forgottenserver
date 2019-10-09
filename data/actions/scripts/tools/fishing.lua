@@ -61,13 +61,13 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			target:decay()
 
 			local rareChance = math.random(100)
-			if rareChance == 1 then
+			if rareChance <= 20 then
 				player:addItem(7158, 1)
 				return true
-			elseif rareChance <= 4 then
+			elseif rareChance <= 30 then
 				player:addItem(2669, 1)
 				return true
-			elseif rareChance <= 10 then
+			elseif rareChance <= 50 then
 				player:addItem(7159, 1)
 				return true
 			end
