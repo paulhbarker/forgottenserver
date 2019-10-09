@@ -38,12 +38,12 @@ local function creatureSayCallback(cid, type, msg)
 		end
 
 	-- SPECTRAL STONE
-	elseif msgcontains(msg, "mission") then
-		if player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 51 then
-			npcHandler:say("Oh, yes! Tell our fellow explorer that the papers are in the mail already.", cid)
-			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 52)
-			npcHandler.topic[cid] = 0
-		end
+	--elseif msgcontains(msg, "mission") then
+	--	if player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 51 then
+	--		npcHandler:say("Oh, yes! Tell our fellow explorer that the papers are in the mail already.", cid)
+	--		player:setStorageValue(Storage.ExplorerSociety.QuestLine, 52)
+	--		npcHandler.topic[cid] = 0
+	--	end
 	-- SPECTRAL STONE
 
 	-- MISSION CHECK
@@ -300,7 +300,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 0
 			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 1)
 		elseif npcHandler.topic[cid] == 3 then
-			if player:removeItem(4848, 1) then
+			if player:removeItem(4874, 1) then
 				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 4)
 				npcHandler:say({
 					"Excellent, you brought just the tool we need! Of course it was only a simple task. However ...",
