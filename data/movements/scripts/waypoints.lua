@@ -24,7 +24,7 @@ local WAYPOINTS = {
     [14] = { name = "Gray Beach", position = Position(33447, 31321, 9) }, -- 41889
     [15] = { name = "Roshamuul", position = Position(33513, 32362, 7) }, -- 41890
     [16] = { name = "Rathleton", position = Position(33594, 31899, 4) }, -- 41891
-    [17] = { name = "Trainers", position = Position(972, 1273, 7) }, -- 41892
+    [17] = { name = "Training Arena", position = Position(972, 1273, 7) }, -- 41892
 }
 local NUMBER_OF_WAYPOINTS = table.getn(WAYPOINTS);
 

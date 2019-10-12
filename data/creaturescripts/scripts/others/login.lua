@@ -28,8 +28,7 @@ local events = {
 	'AdvanceRookgaard',
 	'PythiusTheRotten',
 	'DropLoot',
-	'AutoLoot',
-	'HealthChange'
+	'AutoLoot'
 }
 
 local function onMovementRemoveProtection(cid, oldPosition, time)
