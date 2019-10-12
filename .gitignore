@@ -177,5 +177,3 @@ pip-log.txt
 .*.swo
 
 config.lua
-
-data/world/*.otbm
