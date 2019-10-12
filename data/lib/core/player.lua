@@ -1,31 +1,31 @@
 function Player.allowMovement(self, allow)
-	return self:setStorageValue(STORAGE.blockMovementStorage, allow and -1 or 1)
+	return self:setStorageValue(Storage.blockMovementStorage, allow and -1 or 1)
 end
 
 function Player.checkGnomeRank(self)
-	local points = self:getStorageValue(STORAGE.BIGFOOTBURDEN.RANK)
-	local questProgress = self:getStorageValue(STORAGE.BIGFOOTBURDEN.QUESTLINE)
+	local points = self:getStorageValue(Storage.BigfootBurden.Rank)
+	local questProgress = self:getStorageValue(Storage.BigfootBurden.QuestLine)
 	if points >= 30 and points < 120 then
 		if questProgress == 14 then
-			self:setStorageValue(STORAGE.BIGFOOTBURDEN.QUESTLINE, 15)
+			self:setStorageValue(Storage.BigfootBurden.QuestLine, 15)
 			self:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
 		self:addAchievement('Gnome Little Helper')
 	elseif points >= 120 and points < 480 then
 		if questProgress == 15 then
-			self:setStorageValue(STORAGE.BIGFOOTBURDEN.QUESTLINE, 16)
+			self:setStorageValue(Storage.BigfootBurden.QuestLine, 16)
 			self:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
 		self:addAchievement('Gnome Friend')
 	elseif points >= 480 and points < 1440 then
 		if questProgress == 16 then
-			self:setStorageValue(STORAGE.BIGFOOTBURDEN.QUESTLINE, 17)
+			self:setStorageValue(Storage.BigfootBurden.QuestLine, 17)
 			self:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
 		self:addAchievement('Gnomelike')
 	elseif points >= 1440 then
 		if questProgress == 17 then
-			self:setStorageValue(STORAGE.BIGFOOTBURDEN.QUESTLINE, 18)
+			self:setStorageValue(Storage.BigfootBurden.QuestLine, 18)
 			self:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
 		self:addAchievement('Honorary Gnome')
@@ -84,10 +84,10 @@ end
 
 function Player.getCookiesDelivered(self)
 	local storage, amount = {
-		STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.SIMONTHEBEGGAR, STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.MARKWIN, STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.ARIELLA,
-		STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.HAIRYCLES, STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.DJINN, STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.AVARTAR,
-		STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.ORCKING, STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.LORBAS, STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.WYDA,
-		STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.HJAERN
+		Storage.WHATAFOOLISHQUEST.COOKIEDELIVERY.SIMONTHEBEGGAR, Storage.WHATAFOOLISHQUEST.COOKIEDELIVERY.MARKWIN, Storage.WHATAFOOLISHQUEST.COOKIEDELIVERY.ARIELLA,
+		Storage.WHATAFOOLISHQUEST.COOKIEDELIVERY.HAIRYCLES, Storage.WHATAFOOLISHQUEST.COOKIEDELIVERY.DJINN, Storage.WHATAFOOLISHQUEST.COOKIEDELIVERY.AVARTAR,
+		Storage.WHATAFOOLISHQUEST.COOKIEDELIVERY.ORCKING, Storage.WHATAFOOLISHQUEST.COOKIEDELIVERY.LORBAS, Storage.WHATAFOOLISHQUEST.COOKIEDELIVERY.WYDA,
+		Storage.WHATAFOOLISHQUEST.COOKIEDELIVERY.HJAERN
 	}, 0
 	for i = 1, #storage do
 		if self:getStorageValue(storage[i]) == 1 then
@@ -119,7 +119,7 @@ function Player.getLossPercent(self)
 end
 
 function Player.hasAllowMovement(self)
-	return self:getStorageValue(STORAGE.blockMovementStorage) ~= 1
+	return self:getStorageValue(Storage.blockMovementStorage) ~= 1
 end
 
 function Player.hasRookgaardShield(self)

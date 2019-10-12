@@ -8,6 +8,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		player:setStorageValue(Storage.BigfootBurden.RepairedCrystalCount, repairedCount + 1)
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have repaired a damaged crystal.')
 		target:transform(18311)
+		target:decay()
 		toPosition:sendMagicEffect(CONST_ME_ENERGYAREA)
 	elseif isInArray({18308, 18309, 18310, 18311}, target.itemid) then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'This is not the crystal you\'re looking for!')

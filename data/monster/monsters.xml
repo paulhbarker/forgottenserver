@@ -671,6 +671,7 @@
 	<monster name="Thornback Tortoise" file="misc/misc-reptiles/thornback_tortoise.xml" />
 	<monster name="Tortoise" file="misc/misc-reptiles/tortoise.xml" />
 
+	<monster name="Training Monk" file="misc/training_monk.xml" />
 
 	<!-- Mollusks -->
 	<monster name="Calamary" file="mollusks/calamary.xml" />

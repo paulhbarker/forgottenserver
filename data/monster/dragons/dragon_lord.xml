@@ -67,7 +67,7 @@
 		<item name="green mushroom" chance="12000" />
 		<item name="red dragon scale" chance="1920" />
 		<item name="red dragon leather" chance="1040" />
-		<item name="royal spear" countmax="3" chance="8800" />
+		<item name="royal spear" countmax="10" chance="8800" />
 		<item name="dragon lord trophy" chance="80" />
 		<item name="dragon slayer" chance="100" />
 		<item name="strong health potion" chance="970" />

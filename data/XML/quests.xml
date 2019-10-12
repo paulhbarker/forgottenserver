@@ -1334,4 +1334,8 @@
 			<missionstate id="1" description="You completed this Quest!" />
 		</mission>
 	</quest>
+	<quest name="Finding Your Way" startstorageid="41000" startstoragevalue="1">
+		<mission name="Discover the Waypoints of Tibia" storageid="41001" startvalue="1" endvalue="17" description="You have started your quest to discover the towns of tibia! You have discovered |STATE|/17 waypoints." />
+		<mission name="Access the Secret Waypoint" storageid="41002" startvalue="1" endvalue="2" description="You've discovered all the waypoints! Use a waypoint to access the secret teleport location." />
+	</quest>
 </quests>

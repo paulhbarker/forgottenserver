@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <creaturescripts>
+	<event type="ModalWindow" name="WaypointsModal" script="modal_windows.lua"/>
+
 	<!-- Rookgaard -->
 	<event type="kill" name="TutorialCockroach" script="rookgaard/killCockroach.lua" />
 	<event type="advance" name="AdvanceRookgaard" script="rookgaard/advance.lua" />

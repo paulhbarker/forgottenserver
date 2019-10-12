@@ -3,7 +3,7 @@
 	<health now="100" max="100" />
 	<look type="493" head="41" body="115" legs="100" feet="95" addons="0" />
 	<parameters>
-		<parameter key="message_greet" value="Hello |PLAYERNAME|. You are probably eager to enter the warzones." />
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. You are probably eager to enter the {warzones}." />
 		<parameter key="module_shop" value="1" />
 		<parameter key="shop_buyable" value="mushroom pie,18397,150" />
 		<parameter key="shop_sellable" value="stuffed dragon,5791,6000;frozen starlight,2361,20000;ceremonial ankh,6561,20000;arcane staff,2453,42000;the avenger,6528,42000;arbalest,5803,42000;

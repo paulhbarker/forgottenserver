@@ -934,7 +934,16 @@ Storage = {
 	Factions = 50716,
 	MaryzaCookbook = 50721,
 	combatProtectionStorage = 50722,
-	blockMovementStorage = 100000
+	blockMovementStorage = 100000,
+
+	-- storage keys 41000 to 41100
+	Waypoints = {
+		Teleporters = 41010,
+
+		QuestLine = 41000,
+		Completion = 41001,
+		Secret = 41002
+	}
 }
 
 GlobalStorage = {

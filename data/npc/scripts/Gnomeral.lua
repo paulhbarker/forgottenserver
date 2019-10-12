@@ -12,13 +12,16 @@ local function creatureSayCallback(cid, type, msg)
 		return false
 	end
 
+	local timeToNextAttempt = 14400
+	local relationPerTask = 20
+
 	local player = Player(cid)
 	if(msgcontains(msg, "mission")) then
 		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 16 and player:getStorageValue(Storage.BigfootBurden.QuestLine) < 17 then
-			npcHandler:say("For your rank there are two missions available: {matchmaker} and {golem repair}. You can undertake each mission, but you can turn in a specific mission only once every 20 hours. ", cid)
+			npcHandler:say("For your rank there are two missions available: {matchmaker} and {golem repair}. You can undertake each mission, but you can turn in a specific mission only once every 4 hours. ", cid)
 			npcHandler.topic[cid] = 0
 		elseif player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 17 then
-			npcHandler:say("For your rank there are four missions available: {matchmaker}, {golem repair}, {spore gathering} and {grindstone hunt}. You can undertake each mission, but you can turn in a specific mission only once every 20 hours.", cid)
+			npcHandler:say("For your rank there are four missions available: {matchmaker}, {golem repair}, {spore gathering} and {grindstone hunt}. You can undertake each mission, but you can turn in a specific mission only once every 4 hours.", cid)
 			npcHandler.topic[cid] = 0
 		end
 	--  Matchmaker
@@ -35,12 +38,12 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 0
 		elseif(npcHandler.topic[cid] == 1 or npcHandler.topic[cid] == 2) then
 			if player:getStorageValue(Storage.BigfootBurden.MatchmakerStatus) == 1 then
-				player:setStorageValue(Storage.BigfootBurden.Rank, player:getStorageValue(Storage.BigfootBurden.Rank) + 10)
+				player:setStorageValue(Storage.BigfootBurden.Rank, player:getStorageValue(Storage.BigfootBurden.Rank) + relationPerTask)
 				player:addItem(18422, 2)
 				player:addItem(18215, 1)
 				player:setStorageValue(Storage.BigfootBurden.MissionMatchmaker, 0)
 				player:setStorageValue(Storage.BigfootBurden.MatchmakerStatus, -1)
-				player:setStorageValue(Storage.BigfootBurden.MatchmakerTimeout, os.time() + 72000)
+				player:setStorageValue(Storage.BigfootBurden.MatchmakerTimeout, os.time() + timeToNextAttempt)
 				player:addAchievement('Crystals in Love')
 				player:checkGnomeRank()
 				npcHandler:say("Gnomo arigato |PLAYERNAME|! You did well. That will help us a lot. Take your tokens and this gnomish supply package as a reward. ", cid)
@@ -52,8 +55,8 @@ local function creatureSayCallback(cid, type, msg)
 	-- Golem Repair
 	elseif(msgcontains(msg, "repair")) then
 		if player:getStorageValue(Storage.BigfootBurden.MissionTinkersBell) < 1 and player:getStorageValue(Storage.BigfootBurden.TinkerBellTimeout) < os.time() and player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 16 then
-			npcHandler:say("Our gnomish crystal golems sometimes go nuts. A recent earthquake has disrupted the entire production of a golem factory. ... ", cid)
 			npcHandler:say({
+				"Our gnomish crystal golems sometimes go nuts. A recent earthquake has disrupted the entire production of a golem factory. ... ",
 				"I'm no expert on how those golems work, but it seems that when the crystals of the golems get out of harmony, they do as they please and even sometimes become violent. The violent ones are lost. ...",
 				"Don't bother with them, though you may decide to kill some to get rid of them. The others can be repaired, but to recall them to the workshops, the golems have to be put into a specific resonance. ...",
 				"Use the bell I gave you on the golems, so the gnomes can recall them to their workshops. Getting four of them should be enough for now. Report back when you are ready."
@@ -64,12 +67,12 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 0
 		elseif(npcHandler.topic[cid] == 1 or npcHandler.topic[cid] == 2) then
 			if player:getStorageValue(Storage.BigfootBurden.GolemCount) == 4 and player:removeItem(18343, 1) then
-				player:setStorageValue(Storage.BigfootBurden.Rank, player:getStorageValue(Storage.BigfootBurden.Rank) + 10)
+				player:setStorageValue(Storage.BigfootBurden.Rank, player:getStorageValue(Storage.BigfootBurden.Rank) + relationPerTask)
 				player:addItem(18422, 2)
 				player:addItem(18215, 1)
 				player:setStorageValue(Storage.BigfootBurden.MissionTinkersBell, 0)
 				player:setStorageValue(Storage.BigfootBurden.GolemCount, -1)
-				player:setStorageValue(Storage.BigfootBurden.TinkerBellTimeout, os.time() + 72000)
+				player:setStorageValue(Storage.BigfootBurden.TinkerBellTimeout, os.time() + timeToNextAttempt)
 				player:addAchievement('Substitute Tinker')
 				player:checkGnomeRank()
 				npcHandler:say("Gnomo arigato |PLAYERNAME|! You did well. That will help us a lot. Take your tokens and this gnomish supply package as a reward. ", cid)
@@ -92,12 +95,12 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 0
 		elseif(npcHandler.topic[cid] == 2) then
 			if player:getStorageValue(Storage.BigfootBurden.SporeCount) == 4 and player:removeItem(18332, 1) then
-				player:setStorageValue(Storage.BigfootBurden.Rank, player:getStorageValue(Storage.BigfootBurden.Rank) + 10)
+				player:setStorageValue(Storage.BigfootBurden.Rank, player:getStorageValue(Storage.BigfootBurden.Rank) + relationPerTask)
 				player:addItem(18422, 2)
 				player:addItem(18215, 1)
 				player:setStorageValue(Storage.BigfootBurden.MissionSporeGathering, 0)
 				player:setStorageValue(Storage.BigfootBurden.SporeCount, -1)
-				player:setStorageValue(Storage.BigfootBurden.SporeGatheringTimeout, os.time() + 72000)
+				player:setStorageValue(Storage.BigfootBurden.SporeGatheringTimeout, os.time() + timeToNextAttempt)
 				player:addAchievement('Spore Hunter')
 				player:checkGnomeRank()
 				npcHandler:say("Gnomo arigato |PLAYERNAME|! You did well. That will help us a lot. Take your tokens and this gnomish supply package as a reward. ", cid)
@@ -118,12 +121,12 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 0
 		elseif(npcHandler.topic[cid] == 2) then
 			if player:getStorageValue(Storage.BigfootBurden.GrindstoneStatus) == 1 and player:removeItem(18337, 1) then
-				player:setStorageValue(Storage.BigfootBurden.Rank, player:getStorageValue(Storage.BigfootBurden.Rank) + 10)
+				player:setStorageValue(Storage.BigfootBurden.Rank, player:getStorageValue(Storage.BigfootBurden.Rank) + relationPerTask)
 				player:addItem(18422, 2)
 				player:addItem(18215, 1)
 				player:setStorageValue(Storage.BigfootBurden.MissionGrindstoneHunt, 0)
 				player:setStorageValue(Storage.BigfootBurden.GrindstoneStatus, -1)
-				player:setStorageValue(Storage.BigfootBurden.GrindstoneTimeout, os.time() + 72000)
+				player:setStorageValue(Storage.BigfootBurden.GrindstoneTimeout, os.time() + timeToNextAttempt)
 				player:addAchievement('Grinding Again')
 				player:checkGnomeRank()
 				npcHandler:say("Gnomo arigato |PLAYERNAME|! You did well. That will help us a lot. Take your tokens and this gnomish supply package as a reward. ", cid)

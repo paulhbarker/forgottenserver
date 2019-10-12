@@ -364,7 +364,10 @@ achievements =
 	[327] = {name = "Glooth Engineer", grade = 2, points = 0, description = "Though you might have averted a dire threat for Rathleton, this relative peace may only hold for a while. At least you've scavenged an outfit from some of the poor fellows that have fallen prey to death priest Shagron."}, --update points
 	[328] = {name = "Rathleton Citizen", grade = 1, points = 0, description = "By having rendered numerous services to the city of Rathleton you have been promoted to the rank of Citizen."}, --update points
 	[329] = {name = "Rathleton Commoner", grade = 1, points = 1, description = "By having rendered numerous services to the city of Rathleton you have been promoted to the rank of Commoner."},
-	[330] = {name = "Rathleton Inhabitant", grade = 1, points = 1, description = "By having rendered numerous services to the city of Rathleton you have been promoted to the rank of Inhabitant."}
+	[330] = {name = "Rathleton Inhabitant", grade = 1, points = 1, description = "By having rendered numerous services to the city of Rathleton you have been promoted to the rank of Inhabitant."},
+
+	--Custom
+	[331] = {name = "Waypoint Explorer", grade = 1, points = 1, description = "You've explored all the towns of Tibia and discovered each town's waypoint."}
 
 }
 
