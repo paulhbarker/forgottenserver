@@ -1,16 +1,16 @@
 local berserker = Condition(CONDITION_ATTRIBUTES)
 berserker:setParameter(CONDITION_PARAM_TICKS, 10 * 60 * 1000)
-berserker:setParameter(CONDITION_PARAM_SKILL_MELEE, 5)
+berserker:setParameter(CONDITION_PARAM_SKILL_MELEE, 15)
 berserker:setParameter(CONDITION_PARAM_SKILL_SHIELD, -10)
 
 local mastermind = Condition(CONDITION_ATTRIBUTES)
 mastermind:setParameter(CONDITION_PARAM_TICKS, 10 * 60 * 1000)
-mastermind:setParameter(CONDITION_PARAM_STAT_MAGICPOINTS, 3)
+mastermind:setParameter(CONDITION_PARAM_STAT_MAGICPOINTS, 8)
 mastermind:setParameter(CONDITION_PARAM_SKILL_SHIELD, -10)
 
 local bullseye = Condition(CONDITION_ATTRIBUTES)
 bullseye:setParameter(CONDITION_PARAM_TICKS, 30 * 60 * 1000)
-bullseye:setParameter(CONDITION_PARAM_SKILL_DISTANCE, 5)
+bullseye:setParameter(CONDITION_PARAM_SKILL_DISTANCE, 15)
 bullseye:setParameter(CONDITION_PARAM_SKILL_SHIELD, -10)
 
 local config = {
